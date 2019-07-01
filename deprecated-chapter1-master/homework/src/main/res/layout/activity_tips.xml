@@ -107,21 +107,23 @@
         </LinearLayout>
 
     </RelativeLayout>
-    <ListView
-        android:id="@+id/rv_list"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        tools:listitem="@layout/im_list_item" />
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:orientation="horizontal">
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/rv_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:listitem="@layout/im_list_item"
+            android:layout_above="@id/ly"/>
+
+        <LinearLayout
+            android:id="@+id/ly"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true">
 
             <Button
                 android:id="@+id/bt5"
