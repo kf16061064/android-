@@ -12,11 +12,13 @@ public class FinalChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_chatroom);
 
-        final TextView textView=findViewById(R.id.tv_re);
-        Button button1=findViewById(R.id.bt_re);
-
+        final TextView textView=findViewById(R.id.tv_content_info);
+        String data = getIntent().getStringExtra("data");
+        textView.setText(data);
+        //Button button1=findViewById(R.id.bt_re);
+        /*
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -25,6 +27,6 @@ public class FinalChatActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG);
 
             }
-        });
+        });*/
     }
 }
