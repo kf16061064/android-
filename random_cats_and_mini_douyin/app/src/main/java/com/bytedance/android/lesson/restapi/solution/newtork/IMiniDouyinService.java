@@ -66,4 +66,3 @@ public interface IMiniDouyinService {
     Call <FeedResponse> getGet();
 
 }
-

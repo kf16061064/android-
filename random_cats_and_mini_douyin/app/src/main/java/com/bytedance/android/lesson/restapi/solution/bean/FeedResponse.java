@@ -1,3 +1,5 @@
+
+
 package com.bytedance.android.lesson.restapi.solution.bean;
 
 import com.google.gson.annotations.SerializedName;
@@ -11,9 +13,9 @@ import java.util.List;
 public class FeedResponse {
 
     // TODO-C2 (2) Implement your FeedResponse Bean here according to the response json
-    @SerializedName("feedlist")
+    @SerializedName("feeds")
     private List<Feed> feedlist;
-    @SerializedName("Suc")
+    @SerializedName("success")
     private boolean Suc;
 
     public boolean getSuc(){
@@ -22,8 +24,11 @@ public class FeedResponse {
     public List<Feed> getFeedlist(){
         return this.feedlist;
     }
-    public String toString()
-    {
-        return "Value{"+"Feed="+feedlist+"success"+Suc+'}';
+
+    @Override public String toString() {
+        return "Value{" +
+                "Feed=" + feedlist+
+                "success=" + Suc +
+                '}';
     }
 }
