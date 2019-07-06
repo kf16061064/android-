@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         open(R.id.button5, MediaRecordActivity.class);
         open(R.id.button6, ImageActivity.class);
         open(R.id.button7, WorkActivity.class);
-        open(R.id.button8, Main2Activity.class);
         // 检查权限
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
