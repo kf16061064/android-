@@ -19,6 +19,7 @@ public class VideoActivity extends AppCompatActivity {
     private ImageView love;
     private ImageView comment;
     private String im;
+    private String data;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class VideoActivity extends AppCompatActivity {
 
         videoView = findViewById(R.id.videoView);
         //videoView.setVideoPath(getVideoPath(R.raw.yuminhong));
-        String data = getIntent().getStringExtra("data");
+        data = getIntent().getStringExtra("data");
         im=getIntent().getStringExtra("im");
         videoView.setVideoPath(data);
         videoView.pause();
@@ -69,8 +70,9 @@ public class VideoActivity extends AppCompatActivity {
         comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),CommentActivity.class);
-                intent.putExtra("name",im);
+                Intent intent=new Intent(getApplicationContext(),CommentNet.class);
+                //intent.putExtra("vname",im);
+                intent.putExtra("url",data);
                 startActivity(intent);
             }
         });

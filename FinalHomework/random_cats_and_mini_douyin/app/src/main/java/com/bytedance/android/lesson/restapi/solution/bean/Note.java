@@ -15,6 +15,7 @@ public class Note {
     private String username;
     private String content;
 
+
     public Note(long id) {
         this.id = id;
     }

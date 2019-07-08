@@ -39,17 +39,12 @@
         <activity android:name=".VideoActivity" />
 
         <activity
-            android:name=".CommentActivity"
-            android:label="Comment"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".CommentActivity"/>
         <activity android:name=".debug.DebugActivity" />
         <activity android:name=".NoteActivity" />
+        <activity android:name=".CommentNet"/>
+        <activity android:name=".NewNoteActivity" />
+        <activity android:name=".CameraActivity" />
     </application>
 
 </manifest>
